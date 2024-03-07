@@ -3,6 +3,8 @@ import React, { useState } from "react";
 function QuestionItem({ question, handleDelete, handleCorrectAnswerChange }) {
   const { id, prompt, answers, correctIndex } = question;
 
+  const [selectedAnswer, setSelectedAnswer] = useState(correctIndex);
+
   const options = answers.map((answer, index) => (
     <option key={index} value={index}>{answer}</option>
   ));
@@ -10,6 +12,7 @@ function QuestionItem({ question, handleDelete, handleCorrectAnswerChange }) {
   const handleSelectChange = (e) => {
     const newCorrectIndex = parseInt(e.target.value); // Parse selected value to integer
     handleCorrectAnswerChange(id, newCorrectIndex);
+    setSelectedAnswer(newCorrectIndex);
   };
 
   return (
@@ -18,7 +21,7 @@ function QuestionItem({ question, handleDelete, handleCorrectAnswerChange }) {
       <h5>Prompt: {prompt}</h5>
       <label>
         Correct Answer:
-        <select value={correctIndex} onChange={handleSelectChange}>
+        <select value={selectedAnswer} onChange={handleSelectChange}>
           {options}
         </select>
       </label>

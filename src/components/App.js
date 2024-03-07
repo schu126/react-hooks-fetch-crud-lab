@@ -11,12 +11,12 @@ function App() {
     fetch("http://localhost:4000/questions")
     .then((resp) => resp.json())
     .then((data) => setQuestions(data))
-  }, [])
+  }, [setQuestions])
 
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm /> : <QuestionList setQuestions={setQuestions} questions={questions} />}
+      {page === "Form" ? <QuestionForm setQuestions={setQuestions} questions={questions}/> : <QuestionList setQuestions={setQuestions} questions={questions} />}
     </main>
   );
 }

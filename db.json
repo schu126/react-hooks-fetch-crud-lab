@@ -9,7 +9,7 @@
         "props",
         "state"
       ],
-      "correctIndex": 3
+      "correctIndex": 2
     },
     {
       "id": 3,
@@ -20,7 +20,7 @@
         "onChange",
         "onForm"
       ],
-      "correctIndex": 0
+      "correctIndex": 2
     },
     {
       "id": 4,
@@ -54,6 +54,39 @@
         "controlled"
       ],
       "correctIndex": 1
+    },
+    {
+      "prompt": "who loves me the most?",
+      "answers": [
+        "jerry",
+        "sammy",
+        "nail",
+        "my sister"
+      ],
+      "correctindex": "3",
+      "id": 7
+    },
+    {
+      "prompt": "who is the best person in flatiron",
+      "answers": [
+        "jerry",
+        "sammy",
+        "nail",
+        "david"
+      ],
+      "correctindex": 0,
+      "id": 8
+    },
+    {
+      "prompt": "what is this",
+      "answers": [
+        "blue",
+        "red",
+        "teal",
+        "white"
+      ],
+      "correctindex": 0,
+      "id": 9
     }
   ]
 }
